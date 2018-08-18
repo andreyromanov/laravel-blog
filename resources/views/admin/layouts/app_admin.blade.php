@@ -39,7 +39,7 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a>
-                   <a class="dropdown-item" href="#">Материалы</a>
+                   <a class="dropdown-item" href="{{route('admin.article.index')}}">Материалы</a>
 
                </div>
            </div>
