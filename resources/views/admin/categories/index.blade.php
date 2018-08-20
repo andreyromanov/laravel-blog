@@ -13,6 +13,7 @@
 	<hr>
 
 	<a href="{{route('admin.category.create')}}"><button type="button" class="btn btn-primary float-right">Создать категорию&nbsp;&nbsp;&nbsp;<i class="fas fa-plus"></i></button></a>
+	<br><br>
 	<table class="table table-striped">
 		<thead>
 			<th>Наименование</th>
