@@ -29,28 +29,31 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <a class="navbar-brand" href="{{ url('/admin') }}">
-                    Admin
+                <a class="navbar-brand" href="{{ route('admin.index') }}">
+                    Панель состояния
                 </a>
-                <div class="dropdown">
 
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Блог
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a>
-                   <a class="dropdown-item" href="{{route('admin.article.index')}}">Материалы</a>
+                
+            <div class="dropdown">
 
-               </div>
-           </div>
-           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Блог
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{{route('admin.category.index')}}">Категории</a>
+                <a class="dropdown-item" href="{{route('admin.article.index')}}">Материалы</a>
+
+            </div>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                
+
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -91,7 +94,7 @@
     @yield('content')
 </main>
 </div>
-    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script src="{{asset('js/app.js')}}"></script>
+<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+
 </body>
 </html>
