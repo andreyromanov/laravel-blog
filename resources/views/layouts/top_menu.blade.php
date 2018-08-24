@@ -6,6 +6,9 @@
 			{{$category->title}} <span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu" role="menu">
+			<a class="navbar-brand" href="{{url("/blog/category/$category->slug")}}">
+			{{$category->title}} <span class="caret"></span>
+		</a>
 			@include('layouts.top_menu', ['categories' => $category->children])
 		</ul>
 	@else

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Article;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -13,8 +14,14 @@ class BlogController extends Controller
 
    	return view ('blog.category', [
    		'category'  => $category,
-   		'articles'  => $category->articles()->where('puvlished', 1)->paginate(12)
+   		'articles'  => $category->articles()->where('published', 1)->paginate(12)
    	]);
 
+   }
+
+   public function article($slug) {
+   		return view('blog.article', [
+   			'article'  =>  Article::where('slug', $slug)->first()
+   		]);
    }
 }
